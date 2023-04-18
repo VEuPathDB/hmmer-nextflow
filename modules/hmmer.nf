@@ -5,7 +5,6 @@ process Hmmer {
 
   input:
     path subsetFasta
-    val appls
 
   output:
     path 'hmmer_out.tsv'
@@ -18,6 +17,6 @@ workflow hmmer {
     seqs
 
   main:
-    Hmmer(seqs,params.appls) \
+    Hmmer(seqs) \
         | collectFile(storeDir: params.outputDir, name: 'hmmer_out.tsv') 
 }

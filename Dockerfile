@@ -10,4 +10,6 @@ RUN apt-get -qq update --fix-missing \
 
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:
 
+ADD /bin/*.pl /usr/bin/
+
 WORKDIR /work

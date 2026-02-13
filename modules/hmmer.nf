@@ -2,7 +2,7 @@
 nextflow.enable.dsl=2
 
 process Hmmer {
-  container = 'veupathdb/hmmer:1.0.0'
+  container 'veupathdb/hmmer:1.0.0'
 
   input:
     path subsetFasta
